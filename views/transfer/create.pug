@@ -1,0 +1,14 @@
+extends ../layouts/common.pug
+
+block content
+	h1 New Transfer
+	form(action="/transfer/create", method="POST", enctype="multipart/form-data")
+		.form-group
+			label(for='account') account
+			input#account.form-control(name='accountId',type="text")
+				//- Check value condition
+		.form-group
+			label(for='amount') amount
+			input#amount.form-control(name='amount',type="number")
+				//- Check value condition
+		button.btn.btn-primary Transfer
